@@ -1,6 +1,7 @@
 package telran.net.games;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -11,13 +12,13 @@ import jakarta.persistence.Table;
 public class Game {
 	@Id
 	private Integer id;
-	private LocalDate date;
+	private LocalDateTime date;
 	private boolean is_finished;
 	private String sequence;
 	public Game() {
 		
 	}
-	public Game(int id, LocalDate date, boolean is_finished, String sequence) {
+	public Game(int id, LocalDateTime date, boolean is_finished, String sequence) {
 		this.id = id;
 		this.date = date;
 		this.is_finished = is_finished;
@@ -26,7 +27,7 @@ public class Game {
 	public int getId() {
 		return id;
 	}
-	public LocalDate getDate() {
+	public LocalDateTime getDate() {
 		return date;
 	}
 	public boolean isIs_finished() {
@@ -39,5 +40,6 @@ public class Game {
 	public String toString() {
 		return "Game [id=" + id + ", date=" + date + ", is_finished=" + is_finished + ", sequence=" + sequence + "]";
 	}
+	
 	
 }
