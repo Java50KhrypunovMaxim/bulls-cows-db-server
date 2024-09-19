@@ -11,20 +11,20 @@ import jakarta.persistence.Table;
 @Table(name = "game")
 public class Game {
 	@Id
-	private Integer id;
+	private long id;
 	private LocalDateTime date;
 	private boolean is_finished;
 	private String sequence;
 	public Game() {
 		
 	}
-	public Game(int id, LocalDateTime date, boolean is_finished, String sequence) {
+	public Game(long id, LocalDateTime date, boolean is_finished, String sequence) {
 		this.id = id;
 		this.date = date;
 		this.is_finished = is_finished;
 		this.sequence = sequence;
 	}
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 	public LocalDateTime getDate() {
